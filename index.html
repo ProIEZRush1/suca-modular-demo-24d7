@@ -323,7 +323,7 @@
     const s = SUCAS[tam], setN = $('set').value, sejaj = $('sejaj').checked && s, inst = $('instala').checked && s;
     const total = (s ? s.p : 0) + (sejaj ? 4500 : 0) + (setN ? SETS[setN] * sets : 0);
     $('total').textContent = pesos(total);
-    $('resumen').textContent = sejaj ? 'Total aproximado (sejaj desde)' : 'Total aproximado';
+    
     const l = [];
     if (s) l.push(`• Sucá modular ${s.n}: ${pesos(s.p)}`);
     if (sejaj) l.push('• Sejaj: desde $4,500');
