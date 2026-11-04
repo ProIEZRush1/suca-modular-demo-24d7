@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sucá Modular · Tu sucá, tu espacio, todos los años</title>
+<meta name="description" content="Sucá modular desmontable y reutilizable en 3 tamaños, sejaj, sets de 4 especies y catres plegables. Aparta para el próximo Sucot por WhatsApp.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 40 40%22%3E%3Crect width=%2240%22 height=%2240%22 rx=%2210%22 fill=%22%231f3d2b%22/%3E%3Cpath d=%22M9 31V17l11-7 11 7v14M9 17h22%22 fill=%22none%22 stroke=%22%23e8a35a%22 stroke-width=%222.6%22 stroke-linejoin=%22round%22/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --pri:#1f3d2b; --pri-2:#2a5139; --pri-3:#3b6b4c;
+    --acc:#e8a35a; --acc-h:#c9823a; --acc-c:#fbead4;
+    --fondo:#f7f5ef; --blanco:#ffffff;
+    --tinta:#18231c; --tinta-2:#5b665f; --linea:#e4e2d8;
+    --wa:#1fa855; --wa-h:#178a45;
+    --r:16px; --sombra:0 1px 2px rgba(31,61,43,.05), 0 14px 34px -16px rgba(31,61,43,.3);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:var(--fondo);color:var(--tinta);-webkit-font-smoothing:antialiased;line-height:1.55;overflow-x:hidden}
+  a{color:inherit}
+  h1,h2,h3,.logo{font-family:Fraunces,Georgia,serif;letter-spacing:-.01em}
+  .num{font-family:Fraunces,Georgia,serif;font-weight:700}
+  section{scroll-margin-top:66px;padding:84px 0}
+  .cont{max-width:1160px;margin:0 auto;padding:0 20px}
+  svg.i{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .aviso-demo{background:#13261b;color:#d7e2da;font-size:13px;text-align:center;padding:8px 16px}
+  .aviso-demo a{color:var(--acc);font-weight:600;text-decoration:none}
+  header{position:sticky;top:0;z-index:20;background:rgba(31,61,43,.95);backdrop-filter:blur(10px);border-bottom:1px solid rgba(232,163,90,.25);color:#fff}
+  .barra{display:flex;align-items:center;gap:24px;height:70px}
+  .logo{display:flex;align-items:center;gap:11px;text-decoration:none;font-size:24px;font-weight:700;line-height:1}
+  .logo .t2{color:var(--acc)}
+  .mono{width:38px;height:38px;flex:none;border-radius:11px;background:var(--acc);display:grid;place-items:center}
+  .mono svg{width:22px;height:22px;stroke:var(--pri);stroke-width:2.2;fill:none;stroke-linejoin:round;stroke-linecap:round}
+  nav.menu{display:flex;gap:26px;margin-left:auto;font-size:15px;font-weight:500}
+  nav.menu a{text-decoration:none;color:#d2ded5} nav.menu a:hover{color:var(--acc)}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:0;cursor:pointer;font:600 15px/1 Inter,sans-serif;text-decoration:none;border-radius:999px;padding:14px 22px;transition:.15s}
+  .btn-wa{background:var(--wa);color:#fff} .btn-wa:hover{background:var(--wa-h)}
+  .btn-acc{background:var(--acc);color:var(--pri)} .btn-acc:hover{background:#f0b371}
+  .btn-linea{background:transparent;color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)} .btn-linea:hover{box-shadow:inset 0 0 0 1.5px var(--acc);color:var(--acc)}
+  .btn-claro{background:var(--blanco);color:var(--tinta);box-shadow:inset 0 0 0 1.5px var(--linea)} .btn-claro:hover{box-shadow:inset 0 0 0 1.5px var(--acc-h)}
+  .barra .btn{padding:11px 18px;font-size:14px}
+  .hero{position:relative;overflow:hidden;background:var(--pri);color:#fff}
+  .hero-foto{position:absolute;inset:0;background:url(hero.jpg) center right/cover no-repeat}
+  .hero-foto::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(31,61,43,.97) 0%,rgba(31,61,43,.9) 36%,rgba(31,61,43,.45) 62%,rgba(31,61,43,.05) 86%)}
+  .hero .cont{position:relative;padding-top:96px;padding-bottom:104px}
+  .chip{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,163,90,.55);border-radius:999px;padding:7px 14px;font-size:13px;font-weight:600;color:var(--acc);background:rgba(31,61,43,.45)}
+  .hero h1{font-size:clamp(40px,5.6vw,68px);line-height:1.03;font-weight:700;max-width:640px;margin:22px 0 18px}
+  .hero h1 em{font-style:normal;color:var(--acc)}
+  .hero p.sub{font-size:18px;color:#dbe5de;max-width:520px}
+  .hero .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+  .sellos{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:36px;font-size:14px;font-weight:600;color:#dbe5de}
+  .sellos span{display:inline-flex;align-items:center;gap:7px}
+  .sellos svg{color:var(--acc)}
+  .titulo{max-width:660px;margin-bottom:40px}
+  .titulo .eti{font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--acc-h)}
+  .titulo h2{font-size:clamp(32px,4vw,46px);line-height:1.08;margin:10px 0 12px;font-weight:700}
+  .titulo p{color:var(--tinta-2);font-size:17px}
+  .tamanos{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .tam{background:var(--blanco);border:1px solid var(--linea);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px;box-shadow:var(--sombra);position:relative}
+  .tam.top{border:2px solid var(--acc)}
+  .tam .rec{position:absolute;top:-13px;left:22px;background:var(--acc);color:var(--pri);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:5px 11px}
+  .plano{height:120px;border-radius:12px;background:var(--acc-c);display:grid;place-items:center}
+  .plano i{display:block;border:3px solid var(--pri);border-radius:4px;background:repeating-linear-gradient(135deg,rgba(31,61,43,.1) 0 6px,transparent 6px 12px)}
+  .tam h3{font-size:30px;font-weight:700}
+  .tam p{color:var(--tinta-2);font-size:15px}
+  .tam .precio{font:700 28px Fraunces,Georgia,serif;color:var(--pri)}
+  .tam .btn{align-self:flex-start;margin-top:auto}
+  .incluye{display:grid;grid-template-columns:repeat(4,1fr);gap:10px 18px;margin-top:28px;list-style:none}
+  .incluye li{display:flex;gap:8px;font-size:15px;color:var(--tinta-2)}
+  .incluye svg{color:var(--acc-h)}
+  .extras{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .ext{background:var(--blanco);border:1px solid var(--linea);border-radius:20px;padding:24px;box-shadow:var(--sombra)}
+  .ext .ico{width:46px;height:46px;border-radius:12px;background:var(--pri);color:var(--acc);display:grid;place-items:center;margin-bottom:14px}
+  .ext h3{font-size:24px;font-weight:700;margin-bottom:6px}
+  .ext p{color:var(--tinta-2);font-size:15px;margin-bottom:12px}
+  .lista{list-style:none;display:grid;gap:8px}
+  .lista li{display:flex;justify-content:space-between;gap:10px;border-top:1px dashed var(--linea);padding-top:8px;font-size:15px}
+  .lista b{font-family:Fraunces,Georgia,serif}
+  .nota-precios{margin-top:18px;font-size:14px;color:var(--tinta-2);display:flex;gap:8px;align-items:flex-start}
+  .nota-precios svg{color:var(--acc-h);margin-top:1px}
+  .aparta{background:var(--pri);color:#fff}
+  .aparta .titulo .eti{color:var(--acc)}
+  .aparta .titulo p{color:#cfdcd3}
+  .r-grid{display:grid;grid-template-columns:1fr 1.2fr;gap:48px;align-items:start}
+  .lista-a{list-style:none;display:grid;gap:16px;margin-top:8px}
+  .lista-a li{display:flex;gap:14px}
+  .lista-a .n{width:34px;height:34px;flex:none;border-radius:50%;border:1.5px solid var(--acc);color:var(--acc);display:grid;place-items:center;font:700 15px Fraunces,Georgia,serif}
+  .lista-a b{display:block;font-size:16px}
+  .lista-a span{color:#cfdcd3;font-size:15px}
+  .form{background:var(--fondo);color:var(--tinta);border-radius:22px;padding:24px;box-shadow:0 30px 60px -30px rgba(0,0,0,.6)}
+  .form h3{font-size:28px;font-weight:700;line-height:1.1}
+  .form .nota{font-size:13px;color:var(--tinta-2);margin:4px 0 16px}
+  .sub-l{font-size:13px;font-weight:600;color:var(--tinta-2);margin-bottom:6px}
+  .seg{display:grid;grid-template-columns:repeat(4,1fr);background:var(--blanco);border:1px solid var(--linea);border-radius:12px;padding:3px;margin-bottom:14px}
+  .seg button{all:unset;cursor:pointer;text-align:center;padding:9px 4px;border-radius:9px;font-size:14px;font-weight:600;color:var(--tinta-2)}
+  .seg button[aria-pressed="true"]{background:var(--pri);color:#fff}
+  .seg button:focus-visible{outline:2px solid var(--acc-h)}
+  .chk{display:flex;align-items:center;gap:10px;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:12px 14px;margin-bottom:10px;font-size:15px;font-weight:500;cursor:pointer}
+  .chk input{width:18px;height:18px;accent-color:var(--pri);flex:none}
+  .chk small{margin-left:auto;color:var(--tinta-2);font-size:13px;white-space:nowrap}
+  .fila{display:grid;grid-template-columns:1fr auto;gap:10px;align-items:center;background:var(--blanco);border:1px solid var(--linea);border-radius:14px;padding:10px 12px;margin-bottom:10px}
+  select{font:15px Inter,sans-serif;padding:9px 10px;border-radius:11px;border:1px solid var(--linea);background:#fff;color:var(--tinta);width:100%;min-width:0}
+  select:focus{outline:2px solid var(--acc-h);border-color:transparent}
+  .paso{display:flex;align-items:center;background:var(--fondo);border:1px solid var(--linea);border-radius:999px}
+  .paso button{all:unset;cursor:pointer;width:34px;height:34px;display:grid;place-items:center;font-size:18px;font-weight:600;color:var(--pri)}
+  .paso output{min-width:24px;text-align:center;font-weight:700;font-variant-numeric:tabular-nums}
+  .fila .lbl{font-size:15px;font-weight:500} .fila .lbl small{display:block;color:var(--tinta-2);font-size:12.5px}
+  .total{display:flex;align-items:baseline;justify-content:space-between;gap:12px;background:var(--pri);color:#fff;border-radius:14px;padding:13px 16px;margin:12px 0}
+  .total span{font-size:14px;color:#cfdcd3}
+  .total b{font:700 25px/1 Fraunces,Georgia,serif;color:var(--acc);font-variant-numeric:tabular-nums}
+  .form .btn{width:100%}
+  .form .aclara{font-size:12.5px;color:var(--tinta-2);margin-top:10px;text-align:center}
+  .cta{background:linear-gradient(120deg,var(--pri),var(--pri-3));color:#fff;border-radius:28px;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+  .cta::before{content:"";position:absolute;inset:auto -10% -60% -10%;height:120%;background:radial-gradient(closest-side,rgba(232,163,90,.22),transparent)}
+  .cta>*{position:relative}
+  .cta h2{font-size:clamp(30px,4vw,44px);line-height:1.08;margin-bottom:10px;font-weight:700}
+  .cta p{color:#dbe5de;font-size:17px;margin-bottom:26px}
+  footer{padding:40px 0 110px;color:var(--tinta-2);font-size:14px}
+  .pie{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center;border-top:1px solid var(--linea);padding-top:26px}
+  .pie .logo{font-size:21px;color:var(--pri)}
+  .pie a{text-decoration:none;font-weight:600;color:var(--acc-h)}
+  .flota{position:fixed;right:20px;bottom:20px;z-index:30;box-shadow:0 10px 26px -8px rgba(31,168,85,.6)}
+  @media (max-width:920px){
+    nav.menu{display:none}
+    .barra .btn{margin-left:auto}
+    .tamanos,.extras{grid-template-columns:1fr 1fr}
+    .incluye{grid-template-columns:1fr 1fr}
+    .r-grid{grid-template-columns:1fr}
+  }
+  @media (max-width:620px){
+    .cont{padding:0 16px}
+    .barra{height:62px;gap:12px}
+    .logo{font-size:21px} .mono{width:32px;height:32px}
+    .barra .btn span{display:none}
+    .hero-foto{background-position:78% center}
+    .hero-foto::after{background:linear-gradient(180deg,rgba(31,61,43,.9) 0%,rgba(31,61,43,.82) 60%,rgba(31,61,43,.7) 100%)}
+    .hero .cont{padding-top:58px;padding-bottom:66px}
+    .hero p.sub{font-size:16px}
+    .hero .acciones .btn{flex:1 1 100%}
+    section{padding:60px 0}
+    .tamanos,.extras{grid-template-columns:1fr}
+    .form{padding:16px}
+    .seg button{font-size:13px}
+    .cta{padding:42px 22px;border-radius:22px}
+    .flota span{display:none}
+    .flota{padding:15px}
+  }
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91S17.5 2 12.04 2Zm5.8 14.08c-.24.68-1.42 1.31-1.95 1.36-.5.05-.97.24-3.26-.68-2.76-1.09-4.5-3.92-4.64-4.1-.13-.18-1.11-1.48-1.11-2.82s.7-2 .95-2.27c.25-.27.54-.34.72-.34h.52c.17 0 .39-.06.61.47.23.54.77 1.88.84 2.02.07.13.11.29.02.47-.09.18-.13.29-.27.45-.13.16-.28.35-.4.47-.13.13-.27.28-.12.55.16.27.7 1.15 1.5 1.86 1.03.92 1.9 1.2 2.17 1.34.27.13.43.11.59-.07.16-.18.68-.79.86-1.06.18-.27.36-.23.61-.14.25.09 1.59.75 1.86.88.27.14.45.2.52.32.07.11.07.66-.17 1.33Z"/></symbol>
+  <symbol id="i-flecha" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-hoja" viewBox="0 0 24 24"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.5 19 2c1 2 2 4.2 2 8 0 5.5-4.8 10-10 10Z"/><path d="M2 21c0-3 1.9-5.4 5.1-6"/></symbol>
+  <symbol id="i-cama" viewBox="0 0 24 24"><path d="M2 18V8M22 18v-5a3 3 0 0 0-3-3H8v8M2 14h20M5.5 10.5h.01"/></symbol>
+  <symbol id="i-techo" viewBox="0 0 24 24"><path d="M3 10 12 4l9 6M5 10v10h14V10M3 10h18"/></symbol>
+  <symbol id="i-camion" viewBox="0 0 24 24"><path d="M1 3h15v13H1zM16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></symbol>
+</svg>
+
+<div class="aviso-demo">Demostración preparada para Sucá Modular por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a>. Los datos son de ejemplo.</div>
+
+<header>
+  <div class="cont barra">
+    <a class="logo" href="#inicio" aria-label="Sucá Modular, inicio">
+      <span class="mono" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 20V10l8-5 8 5v10M4 10h16M9 20v-6h6v6"/></svg></span>
+      <span>Sucá <span class="t2">Modular</span></span>
+    </a>
+    <nav class="menu" aria-label="Secciones">
+      <a href="#sucas">Sucás</a>
+      <a href="#sucot">Todo para Sucot</a>
+      <a href="#aparta">Aparta</a>
+    </nav>
+    <a class="btn btn-wa" href="https://wa.me/5215530403479?text=Hola%2C%20quiero%20informaci%C3%B3n%20de%20la%20suc%C3%A1%20modular" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+  </div>
+</header>
+
+<main id="inicio">
+  <div class="hero">
+    <div class="hero-foto" role="img" aria-label="Sucá modular armada en un jardín"></div>
+    <div class="cont">
+      <span class="chip"><svg class="i" style="width:16px;height:16px"><use href="#i-check"/></svg> Aparta para el próximo Sucot</span>
+      <h1>Tu sucá. Tu espacio. <em>Todos los años.</em></h1>
+      <p class="sub">Una sucá modular que compras una vez y usas muchos años: desmontable, resistente y fácil de guardar. Con sejaj, sets de 4 especies y catres plegables.</p>
+      <div class="acciones">
+        <a class="btn btn-acc" href="#aparta">Apartar mi sucá <svg class="i"><use href="#i-flecha"/></svg></a>
+        <a class="btn btn-linea" href="#sucas">Ver tamaños</a>
+      </div>
+      <div class="sellos">
+        <span><svg class="i"><use href="#i-check"/></svg> Desmontable y reutilizable</span>
+        <span><svg class="i"><use href="#i-check"/></svg> 3 tamaños</span>
+        <span><svg class="i"><use href="#i-check"/></svg> Instalación y almacenamiento</span>
+      </div>
+    </div>
+  </div>
+
+  <section id="sucas">
+    <div class="cont">
+      <div class="titulo">
+        <div class="eti">Sucás</div>
+        <h2>Una inversión para muchos Sucot</h2>
+        <p>La compras una vez, la guardas después de Sucot y la vuelves a usar al año siguiente.</p>
+      </div>
+      <div class="tamanos" id="lista-tam"></div>
+      <ul class="incluye">
+        <li><svg class="i"><use href="#i-check"/></svg> Estructura metálica modular</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Lonas laterales resistentes</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Conectores y bases</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Travesaños para el sejaj</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Sistema desmontable</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Bolsa para guardarla</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Manual de armado</li>
+        <li><svg class="i"><use href="#i-check"/></svg> Medidas personalizadas</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="sucot" style="padding-top:0">
+    <div class="cont">
+      <div class="titulo">
+        <div class="eti">Todo para Sucot</div>
+        <h2>Lo que necesitas, en un solo lugar</h2>
+      </div>
+      <div class="extras">
+        <div class="ext"><div class="ico"><svg class="i"><use href="#i-hoja"/></svg></div><h3>Sets de 4 especies</h3><p>Etroguim y lulavim con el set completo. Se entregan 3 días antes de Sucot, a domicilio gratis.</p>
+          <ul class="lista"><li>Kasher lebrajá <b>$1,300</b></li><li>Mehudar AA <b>$1,750</b></li><li>Mehudar AAA <b>$3,000</b></li></ul></div>
+        <div class="ext"><div class="ico"><svg class="i"><use href="#i-techo"/></svg></div><h3>Sejaj</h3><p>De bambú o palma, como complemento de tu sucá, según el tamaño y la opción.</p>
+          <ul class="lista"><li>Desde <b>$4,500</b></li></ul></div>
+        <div class="ext"><div class="ico"><svg class="i"><use href="#i-cama"/></svg></div><h3>Catres plegables</h3><p>Para cumplir la mitzvá de dormir en la sucá, cómodamente.</p>
+          <ul class="lista"><li>Precio <b>por WhatsApp</b></li></ul></div>
+      </div>
+      <p class="nota-precios"><svg class="i"><use href="#i-info"/></svg> Precios de su anuncio de este año; se confirman por WhatsApp. Instalación, desinstalación, transporte y almacenamiento se cotizan.</p>
+    </div>
+  </section>
+
+  <section id="aparta" class="aparta">
+    <div class="cont r-grid">
+      <div>
+        <div class="titulo">
+          <div class="eti">Aparta</div>
+          <h2>Reserva con anticipación</h2>
+          <p>Arma tu pedido para el próximo Sucot, ve el total al momento y envíalo ya escrito por WhatsApp.</p>
+        </div>
+        <ul class="lista-a">
+          <li><div class="n">1</div><div><b>Elige tu sucá</b><span>Tamaño y si lleva sejaj.</span></div></li>
+          <li><div class="n">2</div><div><b>Agrega tus 4 especies</b><span>La calidad y cuántos sets.</span></div></li>
+          <li><div class="n">3</div><div><b>Envíalo por WhatsApp</b><span>Te confirmamos disponibilidad, instalación y entrega.</span></div></li>
+        </ul>
+      </div>
+
+      <form class="form" id="pedido" onsubmit="return false">
+        <h3>Aparta para Sucot</h3>
+        <p class="nota">Precios de este año como referencia. No se cobra nada en la página.</p>
+        <div class="sub-l">Tamaño de la sucá</div>
+        <div class="seg" role="group" aria-label="Tamaño" id="tam">
+          <button type="button" data-t="2x2" aria-pressed="true">2 × 2</button>
+          <button type="button" data-t="3x3" aria-pressed="false">3 × 3</button>
+          <button type="button" data-t="3x4" aria-pressed="false">3 × 4</button>
+          <button type="button" data-t="no" aria-pressed="false">Sin sucá</button>
+        </div>
+        <label class="chk"><input type="checkbox" id="sejaj"> Agregar sejaj <small>desde $4,500</small></label>
+        <label class="chk"><input type="checkbox" id="instala"> Instalación y almacenamiento <small>se cotiza</small></label>
+        <div class="fila">
+          <div><div class="sub-l" style="margin:0 0 6px">Set de 4 especies</div><select id="set"><option value="">Sin set</option><option value="Kasher lebrajá">Kasher lebrajá · $1,300</option><option value="Mehudar AA">Mehudar AA · $1,750</option><option value="Mehudar AAA">Mehudar AAA · $3,000</option></select></div>
+          <div class="paso" role="group" aria-label="Cuántos sets"><button type="button" id="set-menos" aria-label="Quitar un set">−</button><output id="sets">1</output><button type="button" id="set-mas" aria-label="Agregar un set">+</button></div>
+        </div>
+        <div class="fila">
+          <div class="lbl">Catres plegables<small>Precio por WhatsApp</small></div>
+          <div class="paso" role="group" aria-label="Cuántos catres"><button type="button" id="cat-menos" aria-label="Quitar un catre">−</button><output id="catres">0</output><button type="button" id="cat-mas" aria-label="Agregar un catre">+</button></div>
+        </div>
+        <div class="total"><span id="resumen">Total aproximado</span><b id="total">$0</b></div>
+        <a class="btn btn-wa" id="enviar" href="#" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg> Apartar por WhatsApp</a>
+        <p class="aclara">El sejaj y los servicios se confirman según tu sucá.</p>
+      </form>
+    </div>
+  </section>
+
+  <section>
+    <div class="cont">
+      <div class="cta">
+        <h2>Tu sucá lista para el próximo Sucot</h2>
+        <p>Pregunta por disponibilidad, medidas, instalación y opciones de sejaj.</p>
+        <a class="btn btn-acc" href="https://wa.me/5215530403479?text=Hola%2C%20quiero%20apartar%20una%20suc%C3%A1%20para%20el%20pr%C3%B3ximo%20Sucot" target="_blank" rel="noopener"><svg class="i"><use href="#i-wa"/></svg> Escribir por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="cont pie">
+    <span class="logo">Sucá <span style="color:var(--acc-h)">Modular</span></span>
+    <span>Sucás modulares, sejaj, 4 especies y catres · 55 3040 3479</span>
+    <span>Demo por <a href="https://overcloud.us" target="_blank" rel="noopener">Overcloud</a></span>
+  </div>
+</footer>
+
+<a class="btn btn-wa flota" href="https://wa.me/5215530403479?text=Hola%2C%20quiero%20informaci%C3%B3n" target="_blank" rel="noopener" aria-label="Escribir por WhatsApp"><svg class="i"><use href="#i-wa"/></svg><span>WhatsApp</span></a>
+
+<script>
+  const WA = '5215530403479';
+  const liga = (t) => `https://wa.me/${WA}?text=${encodeURIComponent(t)}`;
+  const pesos = (n) => '$' + n.toLocaleString('en-US');
+  const SUCAS = { '2x2': { n: '2 × 2 m', p: 21900, d: 'Ideal para espacios pequeños y familias que buscan una opción compacta.', w: 60, h: 60 }, '3x3': { n: '3 × 3 m', p: 29900, d: 'Espacio cómodo para una familia. Uno de los tamaños principales.', w: 80, h: 80, top: true }, '3x4': { n: '3 × 4 m', p: 38900, d: 'La más amplia: familias grandes, reuniones y más espacio.', w: 96, h: 74 } };
+  const SETS = { 'Kasher lebrajá': 1300, 'Mehudar AA': 1750, 'Mehudar AAA': 3000 };
+  document.getElementById('lista-tam').innerHTML = Object.entries(SUCAS).map(([k, s]) => `
+    <article class="tam${s.top ? ' top' : ''}">${s.top ? '<span class="rec">Más recomendada</span>' : ''}
+      <div class="plano" aria-hidden="true"><i style="width:${s.w}px;height:${s.h}px"></i></div>
+      <h3>${s.n}</h3><p>${s.d}</p><div class="precio">${pesos(s.p)}</div>
+      <a class="btn btn-claro" href="#aparta" data-t="${k}">Apartar esta <svg class="i" style="width:16px;height:16px"><use href="#i-flecha"/></svg></a>
+    </article>`).join('');
+  const $ = (id) => document.getElementById(id);
+  let tam = '2x2', sets = 1, catres = 0;
+  function pintar() {
+    document.querySelectorAll('#tam button').forEach((b) => b.setAttribute('aria-pressed', b.dataset.t === tam));
+    $('sets').textContent = sets; $('catres').textContent = catres;
+    const s = SUCAS[tam], setN = $('set').value, sejaj = $('sejaj').checked && s, inst = $('instala').checked && s;
+    const total = (s ? s.p : 0) + (sejaj ? 4500 : 0) + (setN ? SETS[setN] * sets : 0);
+    $('total').textContent = pesos(total);
+    $('resumen').textContent = sejaj ? 'Total aproximado (sejaj desde)' : 'Total aproximado';
+    const l = [];
+    if (s) l.push(`• Sucá modular ${s.n}: ${pesos(s.p)}`);
+    if (sejaj) l.push('• Sejaj: desde $4,500');
+    if (inst) l.push('• Instalación y almacenamiento: por cotizar');
+    if (setN) l.push(`• ${sets} × Set de 4 especies ${setN}: ${pesos(SETS[setN] * sets)}`);
+    if (catres) l.push(`• ${catres} ${catres === 1 ? 'catre plegable' : 'catres plegables'}`);
+    $('enviar').href = liga(`Hola, quiero apartar para el próximo Sucot:\n${l.join('\n') || '• (por definir)'}\nTotal aproximado: ${pesos(total)}\n¿Me confirman disponibilidad y entrega?`);
+  }
+  $('tam').addEventListener('click', (e) => { const b = e.target.closest('button'); if (b) { tam = b.dataset.t; pintar(); } });
+  document.querySelectorAll('a[data-t]').forEach((a) => a.addEventListener('click', () => { tam = a.dataset.t; pintar(); }));
+  ['sejaj', 'instala', 'set'].forEach((id) => $(id).addEventListener('change', pintar));
+  $('set-mas').addEventListener('click', () => { sets = Math.min(10, sets + 1); pintar(); });
+  $('set-menos').addEventListener('click', () => { sets = Math.max(1, sets - 1); pintar(); });
+  $('cat-mas').addEventListener('click', () => { catres = Math.min(10, catres + 1); pintar(); });
+  $('cat-menos').addEventListener('click', () => { catres = Math.max(0, catres - 1); pintar(); });
+  pintar();
+</script>
+</body>
+</html>
